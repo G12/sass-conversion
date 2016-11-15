@@ -156,9 +156,9 @@ section.content2 {
 .content1 h3 {
   font-size: 1.999rem;
   padding: 0.2rem 2rem 2rem; }
-.content1 h3 i {
-  vertical-align: middle;
-  padding-right: 2rem; }
+  .content1 h3 i {
+    vertical-align: middle;
+    padding-right: 2rem; }
 .content1 p {
   font-size: 1.414rem;
   padding: 0.5rem 2rem 2rem; }
@@ -371,55 +371,46 @@ footer {
   header {
     width: 1400px;
     margin: 0 auto; }
-
-  header:before,
-  header:after {
-    width: 450px; }
-
-  header h1 {
-    width: 100%;
-    color: #7C593C; }
-
-  header h1 i.fa-lg {
-    display: inline;
-    color: #7C593C;
-    vertical-align: baseline;
-    float: none;
-    font-size: 4rem;
-    line-height: 6.3968rem; }
-
-  header h1 i.fa-lg ~ span {
-    float: none;
-    letter-spacing: 0.25rem;
-    font-size: 3.998rem;
-    /**
-    1 lines of 3.998 * 1.6 = 6.3968
-    **/
-    text-align: left; }
-
-  header nav {
-    position: static;
-    clear: both;
-    width: 100%;
-    padding: 0; }
-
-  header nav > ul > li {
-    width: 20%;
-    float: left;
-    background-color: #fff; }
-
-  header nav > ul > li > a {
-    font-size: 1.414rem;
-    line-height: 2rem;
-    min-height: 2rem;
-    border: none;
-    border-left: 1px solid #d4d4d4;
-    padding: 0 1.0rem;
-    margin: 1.0rem 0;
-    background-color: #fff; }
-
-  header nav > ul > li:first-child a {
-    border-left: none; }
+    header:before, header:after {
+      width: 450px; }
+    header h1 {
+      width: 100%;
+      color: #7C593C; }
+    header h1 i.fa-lg {
+      display: inline;
+      color: #7C593C;
+      vertical-align: baseline;
+      float: none;
+      font-size: 4rem;
+      line-height: 6.3968rem; }
+    header h1 i.fa-lg ~ span {
+      float: none;
+      letter-spacing: 0.25rem;
+      font-size: 3.998rem;
+      /**
+      1 lines of 3.998 * 1.6 = 6.3968
+      **/
+      text-align: left; }
+    header nav {
+      position: static;
+      clear: both;
+      width: 100%;
+      padding: 0; }
+      header nav > ul > li {
+        width: 20%;
+        float: left;
+        background-color: #fff; }
+      header nav > ul > li > a {
+        font-size: 1.414rem;
+        line-height: 2rem;
+        min-height: 2rem;
+        border: none;
+        border-left: 1px solid #d4d4d4;
+        padding: 0 1.0rem;
+        margin: 1.0rem 0;
+        background-color: #fff; }
+      header nav > ul > li:first-child a {
+        border-left: none; }
 
   section.focal,
   section.content1,

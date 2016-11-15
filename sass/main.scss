@@ -218,11 +218,11 @@ section {
   h3 {
     font-size: 1.999rem;
     padding: 0.2rem 2rem 2rem;
-  }
 
-  h3 i {
-    vertical-align: middle;
-    padding-right: 2rem;
+    i {
+      vertical-align: middle;
+      padding-right: 2rem;
+    }
   }
 
   p {
@@ -307,7 +307,7 @@ footer {
     min-height: 8rem;
     h1 {
       width: 100%;
-      color: #7C593C;
+      color: $dbr;
     }
     &:before,
     &:after {
@@ -315,7 +315,7 @@ footer {
     }
     h1 i.fa-lg {
       display: inline;
-      color: #7C593C;
+      color: $dbr;
       vertical-align: baseline;
       float: none;
       font-size: 4rem;
@@ -344,14 +344,13 @@ footer {
         line-height: 2rem;
         min-height: 6rem;
         border: none;
-        border-left: 1px solid #d4d4d4;
+        border-left: 1px solid $lg;
         padding: 1.0rem;
-        background-color: #fff;
+        background-color: $w;
       }
       & > ul > li > a:last-child {
-        border-right: 1px solid #d4d4d4;
+        border-right: 1px solid $lg;
       }
-
     }
   }
 
@@ -373,7 +372,7 @@ footer {
     font-size: 1.414rem;
   }
   footer .fa-circle {
-    color: #89C0C9;
+    color: $mb;
   }
   footer .col-2:last-child {
     unicode-bidi: bidi-override;
@@ -401,11 +400,11 @@ footer {
     }
     h1 {
       width: 100%;
-      color: #3a5E63;
+      color: $db;
 
       i.fa-lg {
         display: inline;
-        color: #3a5E63;
+        color: $db;
         vertical-align: baseline;
         float: none;
         font-size: 4rem;
@@ -431,7 +430,7 @@ footer {
       & > ul > li {
         width: 20%;
         float: left;
-        background-color: #fff;
+        background-color: $w;
       }
 
       & > ul > li > a {
@@ -439,10 +438,10 @@ footer {
         line-height: 2rem;
         min-height: 2rem;
         border: none;
-        border-left: 1px solid #d4d4d4;
+        border-left: 1px solid $lg;
         padding: 0 1.0rem;
         margin: 1.0rem 0;
-        background-color: #fff;
+        background-color: $w;
       }
       & > ul > li:first-child a {
         border-left: none;
@@ -488,7 +487,7 @@ footer {
     font-weight: 400;
   }
   footer .fa-circle {
-    color: #C9A689;
+    color: $lbr;
   }
   footer h4[lang=ru] {
     display: block;
@@ -504,55 +503,58 @@ footer {
   header {
     width: 1400px;
     margin: 0 auto;
-  }
-  header:before,
-  header:after {
-    width: 450px;
-  }
-  header h1 {
-    width: 100%;
-    color: #7C593C;
-  }
-  header h1 i.fa-lg {
-    display: inline;
-    color: #7C593C;
-    vertical-align: baseline;
-    float: none;
-    font-size: 4rem;
-    line-height: 6.3968rem;
-  }
-  header h1 i.fa-lg ~ span {
-    float: none;
-    letter-spacing: 0.25rem;
-    font-size: 3.998rem;
-    /**
-    1 lines of 3.998 * 1.6 = 6.3968
-    **/
-    text-align: left;
-  }
-  header nav {
-    position: static;
-    clear: both;
-    width: 100%;
-    padding: 0;
-  }
-  header nav > ul > li {
-    width: 20%;
-    float: left;
-    background-color: #fff;
-  }
-  header nav > ul > li > a {
-    font-size: 1.414rem;
-    line-height: 2rem;
-    min-height: 2rem;
-    border: none;
-    border-left: 1px solid #d4d4d4;
-    padding: 0 1.0rem;
-    margin: 1.0rem 0;
-    background-color: #fff;
-  }
-  header nav > ul > li:first-child a {
-    border-left: none;
+
+    &:before,
+    &:after {
+      width: 450px;
+    }
+    h1 {
+      width: 100%;
+      color: $dbr;
+    }
+    h1 i.fa-lg {
+      display: inline;
+      color: $dbr;
+      vertical-align: baseline;
+      float: none;
+      font-size: 4rem;
+      line-height: 6.3968rem;
+    }
+    h1 i.fa-lg ~ span {
+      float: none;
+      letter-spacing: 0.25rem;
+      font-size: 3.998rem;
+      /**
+      1 lines of 3.998 * 1.6 = 6.3968
+      **/
+      text-align: left;
+    }
+    nav {
+      position: static;
+      clear: both;
+      width: 100%;
+      padding: 0;
+
+      & > ul > li {
+        width: 20%;
+        float: left;
+        background-color: $w;
+      }
+      & > ul > li > a {
+        font-size: 1.414rem;
+        line-height: 2rem;
+        min-height: 2rem;
+        border: none;
+        border-left: 1px solid $lg;
+        padding: 0 1.0rem;
+        margin: 1.0rem 0;
+        background-color: $w;
+      }
+      & > ul > li:first-child a {
+        border-left: none;
+      }
+    }
+
   }
   section.focal,
   section.content1,
@@ -611,10 +613,10 @@ footer {
     letter-spacing: 0.2rem;
   }
   footer p:last-child {
-    color: #d4d4d4;
+    color: $lg;
   }
   footer .fa-circle {
-    color: #89C0C9;
+    color: $mb;
   }
 
   footer h4[lang=en] {
