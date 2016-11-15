@@ -172,17 +172,17 @@ header {
 
 }
 
-section {
-  &.focal {
-    width: 400px; /* default */
-    margin: 0 auto;
-  }
-  &.content1 {
-    padding: 2rem 0;
-  }
-  &.content2 {
-    padding: 2rem 0;
-  }
+section.focal {
+  width: 400px; /* default */
+  margin: 0 auto;
+}
+
+section.content1 {
+  padding: 2rem 0;
+}
+
+section.content2 {
+  padding: 2rem 0;
 }
 
 .row {
@@ -450,7 +450,21 @@ footer {
     }
 
   }
-
+  section.focal,
+  section.content1,
+  section.content2,
+  footer{
+    width: 900px;
+    margin: 0 auto;
+  }
+  section.focal h2{
+    width: 600px;
+    margin: 0 auto;
+  }
+  section.focal p.author{
+    width: 600px;
+    margin: 0 auto;
+  }
   .col-3 {
     float: left;
     width: 30%;
