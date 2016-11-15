@@ -122,15 +122,15 @@ header {
       font-weight: 700;
       color: #7C593C; }
 
-section.focal {
+.focal {
   width: 400px;
   /* default */
   margin: 0 auto; }
 
-section.content1 {
+.content1 {
   padding: 2rem 0; }
 
-section.content2 {
+.content2 {
   padding: 2rem 0; }
 
 .row {
@@ -244,9 +244,9 @@ footer {
       header nav > ul > li > a:last-child {
         border-right: 1px solid #d4d4d4; }
 
-  section.focal,
-  section.content1,
-  section.content2,
+  .focal,
+  .content1,
+  .content2,
   footer {
     width: 700px;
     margin: 0 auto; }
@@ -255,10 +255,10 @@ footer {
     width: 50%;
     float: left; }
 
-  section.content2 h4 {
+  .content2 h4 {
     font-size: 1.414rem; }
 
-  section.content2 li {
+  .content2 li {
     font-size: 1.414rem; }
 
   footer .fa-circle {
@@ -318,18 +318,18 @@ footer {
       header nav > ul > li:first-child a {
         border-left: none; }
 
-  section.focal,
-  section.content1,
-  section.content2,
+  .focal,
+  .content1,
+  .content2,
   footer {
     width: 900px;
     margin: 0 auto; }
 
-  section.focal h2 {
+  .focal h2 {
     width: 600px;
     margin: 0 auto; }
 
-  section.focal p.author {
+  .focal p.author {
     width: 600px;
     margin: 0 auto; }
 
@@ -349,21 +349,21 @@ footer {
   .col-4:first-child {
     margin-left: 0; }
 
-  section.content1 h3 {
+  .content1 h3 {
     font-size: 1.999rem;
     font-weight: 100; }
 
-  section.content1 h3 .fa-2x {
+  .content1 h3 .fa-2x {
     font-size: 1.999rem;
     padding-right: 1rem; }
 
-  section.content2 h4 {
+  .content2 h4 {
     font-size: 1.414rem; }
 
-  section.content2 li {
+  .content2 li {
     font-size: 1.414rem; }
 
-  section.content2 p {
+  .content2 p {
     font-size: 1rem;
     font-weight: 400; }
 
@@ -418,19 +418,19 @@ footer {
       header nav > ul > li:first-child a {
         border-left: none; }
 
-  section.focal,
-  section.content1,
-  section.content2,
+  .focal,
+  .content1,
+  .content2,
   footer {
     width: 1400px;
     margin: 0 auto; }
 
-  section.focal h2 {
+  .focal h2 {
     font-size: 3.998rem;
     width: 600px;
     margin: 0 auto; }
 
-  section.focal p.author {
+  .focal p.author {
     width: 600px;
     margin: 0 auto; }
 
@@ -450,22 +450,22 @@ footer {
   .col-4:first-child {
     margin-left: 0; }
 
-  section.content1 h3 {
+  .content1 h3 {
     font-size: 2.827rem;
     font-weight: 100; }
 
-  section.content1 h3 .fa-2x {
+  .content1 h3 .fa-2x {
     font-size: 2.827rem;
     padding-right: 1rem;
     vertical-align: middle; }
 
-  section.content2 h4 {
+  .content2 h4 {
     font-size: 1.999rem; }
 
-  section.content2 li {
+  .content2 li {
     font-size: 1.999rem; }
 
-  section.content2 p {
+  .content2 p {
     font-size: 1.414rem;
     font-weight: 400; }
 
