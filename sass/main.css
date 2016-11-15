@@ -74,36 +74,13 @@ header {
   position: relative;
   /***********************************************
                 NAVIGATION
-  ***********************************************/
-  /***********************************************
-                CONTENT
   ***********************************************/ }
   header h1 {
     width: 100%;
-    padding: 0 2rem; }
-  header nav {
-    width: 100%;
-    padding: 2rem 0;
-    clear: both; }
-  header nav > ul li {
-    width: 100%;
-    float: none; }
-  header nav > ul > li > a {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    color: #222;
-    font-size: 1.414rem;
-    letter-spacing: 0.25rem;
-    border: 1px solid #d4d4d4;
-    border-bottom: none;
-    padding: 1.0rem 2rem;
-    line-height: 1;
-    background-color: #fff; }
-  header nav > ul > li > a:hover {
-    font-weight: 700;
-    color: #7C593C; }
-  header h1 {
+    padding: 0 2rem;
+    /***********************************************
+              CONTENT
+    ***********************************************/
     color: #7C593C;
     letter-spacing: 0.1rem; }
     header h1 i.fa-lg {
@@ -122,6 +99,28 @@ header {
       **/
       padding-left: 1rem;
       text-align: right; }
+  header nav {
+    width: 100%;
+    padding: 2rem 0;
+    clear: both; }
+    header nav > ul li {
+      width: 100%;
+      float: none; }
+    header nav > ul > li > a {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      color: #222;
+      font-size: 1.414rem;
+      letter-spacing: 0.25rem;
+      border: 1px solid #d4d4d4;
+      border-bottom: none;
+      padding: 1.0rem 2rem;
+      line-height: 1;
+      background-color: #fff; }
+    header nav > ul > li > a:hover {
+      font-weight: 700;
+      color: #7C593C; }
 
 section.focal {
   width: 400px;
@@ -210,9 +209,6 @@ footer {
     width: 700px;
     margin: 0 auto;
     min-height: 8rem; }
-    header h1 {
-      width: 100%;
-      color: #7C593C; }
     header:before, header:after {
       width: 230px; }
     header h1 i.fa-lg {
@@ -233,7 +229,6 @@ footer {
     header nav {
       position: static;
       clear: both;
-      width: 100%;
       padding: 0; }
       header nav > ul > li {
         width: 20%;
@@ -287,7 +282,6 @@ footer {
     header:before, header:after {
       width: 300px; }
     header h1 {
-      width: 100%;
       color: #3a5E63; }
       header h1 i.fa-lg {
         display: inline;
@@ -307,7 +301,6 @@ footer {
     header nav {
       position: static;
       clear: both;
-      width: 100%;
       padding: 0; }
       header nav > ul > li {
         width: 20%;
@@ -390,9 +383,6 @@ footer {
     margin: 0 auto; }
     header:before, header:after {
       width: 450px; }
-    header h1 {
-      width: 100%;
-      color: #7C593C; }
     header h1 i.fa-lg {
       display: inline;
       color: #7C593C;
@@ -411,7 +401,6 @@ footer {
     header nav {
       position: static;
       clear: both;
-      width: 100%;
       padding: 0; }
       header nav > ul > li {
         width: 20%;

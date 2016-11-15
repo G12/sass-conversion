@@ -106,45 +106,9 @@ header {
   h1 {
     width: 100%;
     padding: 0 2rem;
-  }
-  nav {
-    width: 100%;
-    padding: 2rem 0;
-    clear: both;
-  }
-
-  /***********************************************
-                NAVIGATION
-  ***********************************************/
-
-  nav > ul li {
-    width: 100%;
-    float: none;
-  }
-
-  nav > ul > li > a {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    color: $dg;
-    font-size: 1.414rem;
-    letter-spacing: 0.25rem;
-    border: 1px solid $lg;
-    border-bottom: none;
-    padding: 1.0rem 2rem;
-    line-height: 1;
-    background-color: $w;
-  }
-
-  nav > ul > li > a:hover {
-    font-weight: 700;
-    color: $dbr;
-  }
-
-  /***********************************************
-                CONTENT
-  ***********************************************/
-  h1 {
+    /***********************************************
+              CONTENT
+    ***********************************************/
     color: $dbr;
     letter-spacing: 0.1rem;
 
@@ -170,6 +134,39 @@ header {
 
   }
 
+  /***********************************************
+                NAVIGATION
+  ***********************************************/
+  nav {
+    width: 100%;
+    padding: 2rem 0;
+    clear: both;
+
+    & > ul li {
+      width: 100%;
+      float: none;
+    }
+
+    & > ul > li > a {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      color: $dg;
+      font-size: 1.414rem;
+      letter-spacing: 0.25rem;
+      border: 1px solid $lg;
+      border-bottom: none;
+      padding: 1.0rem 2rem;
+      line-height: 1;
+      background-color: $w;
+    }
+
+    & > ul > li > a:hover {
+      font-weight: 700;
+      color: $dbr;
+    }
+
+  }
 }
 
 section.focal {
@@ -305,10 +302,7 @@ footer {
     width: 700px;
     margin: 0 auto;
     min-height: 8rem;
-    h1 {
-      width: 100%;
-      color: $dbr;
-    }
+
     &:before,
     &:after {
       width: 230px;
@@ -333,7 +327,6 @@ footer {
     nav {
       position: static;
       clear: both;
-      width: 100%;
       padding: 0;
       & > ul > li {
         width: 20%;
@@ -399,7 +392,6 @@ footer {
       width: 300px;
     }
     h1 {
-      width: 100%;
       color: $db;
 
       i.fa-lg {
@@ -424,7 +416,6 @@ footer {
     nav {
       position: static;
       clear: both;
-      width: 100%;
       padding: 0;
 
       & > ul > li {
@@ -453,15 +444,15 @@ footer {
   section.focal,
   section.content1,
   section.content2,
-  footer{
+  footer {
     width: 900px;
     margin: 0 auto;
   }
-  section.focal h2{
+  section.focal h2 {
     width: 600px;
     margin: 0 auto;
   }
-  section.focal p.author{
+  section.focal p.author {
     width: 600px;
     margin: 0 auto;
   }
@@ -522,10 +513,6 @@ footer {
     &:after {
       width: 450px;
     }
-    h1 {
-      width: 100%;
-      color: $dbr;
-    }
     h1 i.fa-lg {
       display: inline;
       color: $dbr;
@@ -546,7 +533,6 @@ footer {
     nav {
       position: static;
       clear: both;
-      width: 100%;
       padding: 0;
 
       & > ul > li {
