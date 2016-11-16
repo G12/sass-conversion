@@ -102,7 +102,6 @@ header {
   width: 400px; /* default */
   margin: 0 auto;
   position: relative;
-
   h1 {
     width: 100%;
     padding: 0 2rem;
@@ -111,7 +110,6 @@ header {
     ***********************************************/
     color: $dbr;
     letter-spacing: 0.1rem;
-
     i.fa-lg {
       display: block;
       width: 25%;
@@ -120,7 +118,6 @@ header {
       line-height: 12.7936rem;
       color: $lbr;
     }
-
     i.fa-lg ~ span {
       float: right;
       width: 75%;
@@ -131,9 +128,7 @@ header {
       padding-left: 1rem;
       text-align: right;
     }
-
   }
-
   /***********************************************
                 NAVIGATION
   ***********************************************/
@@ -141,12 +136,10 @@ header {
     width: 100%;
     padding: 2rem 0;
     clear: both;
-
     & > ul li {
       width: 100%;
       float: none;
     }
-
     & > ul > li > a {
       display: block;
       text-align: center;
@@ -160,26 +153,11 @@ header {
       line-height: 1;
       background-color: $w;
     }
-
     & > ul > li > a:hover {
       font-weight: 700;
       color: $dbr;
     }
-
   }
-}
-
-.focal {
-  width: 400px; /* default */
-  margin: 0 auto;
-}
-
-.content1 {
-  padding: 2rem 0;
-}
-
-.content2 {
-  padding: 2rem 0;
 }
 
 .row {
@@ -192,6 +170,9 @@ header {
   padding-bottom: 2rem;
   border-left: 1px solid $db;
   margin-bottom: 2rem;
+  &:first-child {
+    border-left: 0;
+  }
 }
 
 /***********************************************
@@ -199,34 +180,40 @@ header {
 ***********************************************/
 
 .focal {
+  width: 400px; /* default */
+  margin: 0 auto;
   h2 {
     font-size: 1.999rem;
     line-height: 1.2;
     padding: 2rem 2rem 1rem 2rem;
+    margin: 0 auto;
   }
   .author {
     font-size: 1rem;
     padding: 0.2rem 2rem 2rem;
+    margin: 0 auto;
   }
+}
 
+.content1,
+.content2{
+  padding: 2rem 0;
+  margin: 0 auto;
+  p {
+    font-size: 1.414rem;
+    padding: 0.5rem 2rem 1rem;
+  }
 }
 
 .content1 {
   h3 {
     font-size: 1.999rem;
     padding: 0.2rem 2rem 2rem;
-
     i {
       vertical-align: middle;
       padding-right: 2rem;
     }
   }
-
-  p {
-    font-size: 1.414rem;
-    padding: 0.5rem 2rem 2rem;
-  }
-
 }
 
 .content2 {
@@ -234,22 +221,14 @@ header {
     font-size: 1.999rem;
     padding: 1rem 2rem 0.5rem;
   }
-
   h4 {
     font-size: 1.999rem;
     padding: 1rem 2rem 0rem;
   }
-
-  p {
-    font-size: 1.414rem;
-    padding: 0.5rem 2rem 1rem;
-  }
-
   li {
     padding: 0.5rem 2rem;
     font-size: 1.414rem;
   }
-
 }
 
 /***********************************************
@@ -257,40 +236,28 @@ header {
 ***********************************************/
 footer {
   padding: 2rem 0;
-
-  & .col-2:first-child {
-    border-left: 0;
-  }
-
-  p:last-child {
-  }
-
+  margin: 0 auto;
   h4 {
     font-size: 1.414rem;
     padding: 0.5rem 2rem;
     color: $dbr;
   }
-
   p {
     font-size: 1rem;
     padding: 0.5rem 2rem;
     color: $dg;
   }
-
   .fa-circle {
     color: $dg;
   }
-
   h4[lang=de] {
     display: block;
   }
-
   h4[lang=en],
   h4[lang=ar],
   h4[lang=ru] {
     display: none;
   }
-
 }
 
 /***********************************************
@@ -300,7 +267,6 @@ footer {
 @media all and (min-width: 701px) and (max-width: 900px) {
   header {
     width: 700px;
-    margin: 0 auto;
     min-height: 8rem;
 
     &:before,
@@ -346,54 +312,53 @@ footer {
       }
     }
   }
-
   .focal,
   .content1,
   .content2,
   footer {
     width: 700px;
-    margin: 0 auto;
   }
   .col-4 {
     width: 50%;
     float: left;
   }
-  .content2 h4 {
-    font-size: 1.414rem;
+  .content2{
+    h4 {
+      font-size: 1.414rem;
+    }
+    li {
+      font-size: 1.414rem;
+    }
   }
-  .content2 li {
-    font-size: 1.414rem;
-  }
-  footer .fa-circle {
-    color: $mb;
-  }
-  footer .col-2:last-child {
-    unicode-bidi: bidi-override;
-    direction: rtl;
-  }
+  footer{
+    .fa-circle {
+      color: $mb;
+    }
+    .col-2:last-child {
+      unicode-bidi: bidi-override;
+      direction: rtl;
+    }
 
-  footer h4[lang=ar] {
-    display: block;
-  }
-  footer h4[lang=de],
-  footer h4[lang=en],
-  footer h4[lang=ru] {
-    display: none;
+    h4[lang=ar] {
+      display: block;
+    }
+    h4[lang=de],
+    h4[lang=en],
+    h4[lang=ru] {
+      display: none;
+    }
   }
 }
 
 @media all and (min-width: 901px) and (max-width: 1400px) {
   header {
     width: 900px;
-    margin: 0 auto;
-
     &:before,
     &:after {
       width: 300px;
     }
     h1 {
       color: $db;
-
       i.fa-lg {
         display: inline;
         color: $db;
@@ -402,7 +367,6 @@ footer {
         font-size: 4rem;
         line-height: 6.3968rem;
       }
-
       i.fa-lg ~ span {
         float: none;
         letter-spacing: 0.25rem;
@@ -417,13 +381,11 @@ footer {
       position: static;
       clear: both;
       padding: 0;
-
       & > ul > li {
         width: 20%;
         float: left;
         background-color: $w;
       }
-
       & > ul > li > a {
         font-size: 1rem;
         line-height: 2rem;
@@ -437,77 +399,78 @@ footer {
       & > ul > li:first-child a {
         border-left: none;
       }
-
     }
-
   }
   .focal,
   .content1,
   .content2,
   footer {
     width: 900px;
-    margin: 0 auto;
   }
-  .focal h2 {
-    width: 600px;
-    margin: 0 auto;
-  }
-  .focal p.author {
-    width: 600px;
-    margin: 0 auto;
+  .focal{
+    h2 {
+      width: 600px;
+    }
+    p.author {
+      width: 600px;
+    }
   }
   .col-3 {
     float: left;
     width: 30%;
     margin-left: 5%;
-  }
-  .col-3:first-child {
-    margin-left: 0;
+    &:first-child {
+      margin-left: 0;
+    }
   }
   .col-4 {
     width: 22%;
     margin-left: 4%;
     float: left;
+    &:first-child {
+      margin-left: 0;
+    }
   }
-  .col-4:first-child {
-    margin-left: 0;
+  .content1{
+    h3 {
+      font-size: 1.999rem;
+      font-weight: 100;
+    }
+    h3 .fa-2x {
+      font-size: 1.999rem;
+      padding-right: 1rem;
+    }
   }
-  .content1 h3 {
-    font-size: 1.999rem;
-    font-weight: 100;
+  .content2{
+    h4 {
+      font-size: 1.414rem;
+    }
+    li {
+      font-size: 1.414rem;
+    }
+    p {
+      font-size: 1rem;
+      font-weight: 400;
+    }
   }
-  .content1 h3 .fa-2x {
-    font-size: 1.999rem;
-    padding-right: 1rem;
-  }
-
-  .content2 h4 {
-    font-size: 1.414rem;
-  }
-  .content2 li {
-    font-size: 1.414rem;
-  }
-  .content2 p {
-    font-size: 1rem;
-    font-weight: 400;
-  }
-  footer .fa-circle {
-    color: $lbr;
-  }
-  footer h4[lang=ru] {
-    display: block;
-  }
-  footer h4[lang=de],
-  footer h4[lang=ar],
-  footer h4[lang=en] {
-    display: none;
+  footer{
+    .fa-circle {
+      color: $lbr;
+    }
+    h4[lang=ru] {
+      display: block;
+    }
+    h4[lang=de],
+    h4[lang=ar],
+    h4[lang=en] {
+      display: none;
+    }
   }
 }
 
 @media all and (min-width: 1401px) {
   header {
     width: 1400px;
-    margin: 0 auto;
 
     &:before,
     &:after {
@@ -561,71 +524,74 @@ footer {
   .content2,
   footer {
     width: 1400px;
-    margin: 0 auto;
   }
-  .focal h2 {
-    font-size: 3.998rem;
-    width: 600px;
-    margin: 0 auto;
-  }
-  .focal p.author {
-    width: 600px;
-    margin: 0 auto;
+  .focal {
+    h2 {
+      font-size: 3.998rem;
+      width: 600px;
+    }
+    p.author {
+      width: 600px;
+    }
   }
   .col-3 {
     float: left;
     width: 30%;
     margin-left: 5%;
-  }
-  .col-3:first-child {
-    margin-left: 0;
+    &:first-child {
+      margin-left: 0;
+    }
   }
   .col-4 {
     width: 22%;
     margin-left: 4%;
     float: left;
+    &:first-child {
+      margin-left: 0;
+    }
   }
-  .col-4:first-child {
-    margin-left: 0;
-  }
-  .content1 h3 {
-    font-size: 2.827rem;
-    font-weight: 100;
-  }
-  .content1 h3 .fa-2x {
-    font-size: 2.827rem;
-    padding-right: 1rem;
-    vertical-align: middle;
-  }
-
-  .content2 h4 {
-    font-size: 1.999rem;
-  }
-  .content2 li {
-    font-size: 1.999rem;
-  }
-  .content2 p {
-    font-size: 1.414rem;
-    font-weight: 400;
-  }
-  footer p {
-    font-size: 1.414rem;
-    letter-spacing: 0.2rem;
-  }
-  footer p:last-child {
-    color: $lg;
-  }
-  footer .fa-circle {
-    color: $mb;
+  .content1 {
+    h3 {
+      font-size: 2.827rem;
+      font-weight: 100;
+      .fa-2x {
+        font-size: 2.827rem;
+        padding-right: 1rem;
+        vertical-align: middle;
+      }
+    }
   }
 
-  footer h4[lang=en] {
-    display: block;
-  }
-  footer h4[lang=de],
-  footer h4[lang=ar],
-  footer h4[lang=ru] {
-    display: none;
+  .content2 {
+    li, h4 {
+      font-size: 1.999rem;
+    }
+    p {
+      font-size: 1.414rem;
+      font-weight: 400;
+    }
   }
 
+  footer {
+    p {
+      font-size: 1.414rem;
+      letter-spacing: 0.2rem;
+      &:last-child {
+        color: $lg;
+      }
+   }
+    .fa-circle {
+      color: $mb;
+    }
+    h4[lang=en] {
+      display: block;
+    }
+    h4[lang=de],
+    h4[lang=ar],
+    h4[lang=ru] {
+      display: none;
+    }
+  }
 }
+
+//6,194 bytes
