@@ -1,8 +1,17 @@
 // main SASS file
 //To compress use:  sass --watch main.scss:main.css --style compressed
-@import "variables";
-@import "mixins";
-@import "queries";
+
+$lb: #C7F7FF; //Light Blue
+$mb: #89C0C9; //Medium Blue
+$db: #3a5E63; //Dark Blue
+$lbr: #C9A689; //Light Brown
+$dbr: #7C593C; //Dark Brown
+$lg: #d4d4d4; //Light Grey
+$dg: #222; //Dark Grey
+$w: #fff; //White
+
+$f1: 'Josefin Sans', ‘Trebuchet MS’, Helvetica, sans-serif; /* default for whole page */
+$f2: Cardo, ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif; /* serif for the headings */
 
 * {
   padding: 0;
@@ -57,7 +66,7 @@ ul {
     content: "";
     position: absolute;
     bottom: -1rem;
-    @include width(30%);
+    width: 30%;
     height: 1rem;
     background-color: $db;
   }
@@ -90,11 +99,11 @@ ul {
 }
 
 header {
-  @include width(400px);
+  width: 400px; /* default */
   margin: 0 auto;
   position: relative;
   h1 {
-    @include width(100%);
+    width: 100%;
     padding: 0 2rem;
     /***********************************************
               CONTENT
@@ -103,7 +112,7 @@ header {
     letter-spacing: 0.1rem;
     i.fa-lg {
       display: block;
-      @include width(25%);
+      width: 25%;
       float: left;
       font-size: 7rem;
       line-height: 12.7936rem;
@@ -111,7 +120,7 @@ header {
     }
     i.fa-lg ~ span {
       float: right;
-      @include width(75%);
+      width: 75%;
       font-size: 3.998rem;
       /**
       2 lines of 3.998 * 1.6 = 12.7936
@@ -124,11 +133,11 @@ header {
                 NAVIGATION
   ***********************************************/
   nav {
-    @include width(100%);
+    width: 100%;
     padding: 2rem 0;
     clear: both;
     & > ul li {
-      @include width(100%);
+      width: 100%;
       float: none;
     }
     & > ul > li > a {
@@ -156,7 +165,7 @@ header {
 }
 
 .col-2 {
-  @include width(50%);
+  width: 50%;
   float: left;
   padding-bottom: 2rem;
   border-left: 1px solid $db;
@@ -171,7 +180,7 @@ header {
 ***********************************************/
 
 .focal {
-  @include width(400px);
+  width: 400px; /* default */
   margin: 0 auto;
   h2 {
     font-size: 1.999rem;
@@ -186,21 +195,19 @@ header {
   }
 }
 
-.content1 {
+.content1,
+.content2{
   padding: 2rem 0;
   margin: 0 auto;
   p {
     font-size: 1.414rem;
     padding: 0.5rem 2rem 1rem;
   }
-  h3 {
-    font-size: 1.999rem;
-  }
 }
 
 .content1 {
-  @extend .content1;
   h3 {
+    font-size: 1.999rem;
     padding: 0.2rem 2rem 2rem;
     i {
       vertical-align: middle;
@@ -210,8 +217,8 @@ header {
 }
 
 .content2 {
-  @extend .content1;
   h3 {
+    font-size: 1.999rem;
     padding: 1rem 2rem 0.5rem;
   }
   h4 {
@@ -257,28 +264,73 @@ footer {
                 MEDIA QUERIES
 ***********************************************/
 
-//@media all and (min-width: 701px) and (max-width: 900px) {
-@include media(701px, 900px) {
-
-  @include header(700px, 230px, $dbr, 1rem, 6rem, 1.0rem) {
+@media all and (min-width: 701px) and (max-width: 900px) {
+  header {
+    width: 700px;
     min-height: 8rem;
+
+    &:before,
+    &:after {
+      width: 230px;
+    }
+    h1 i.fa-lg {
+      display: inline;
+      color: $dbr;
+      vertical-align: baseline;
+      float: none;
+      font-size: 4rem;
+      line-height: 6.3968rem;
+    }
+    h1 i.fa-lg ~ span {
+      float: none;
+      letter-spacing: 0.25rem;
+      font-size: 3.998rem;
+      /**
+      1 lines of 3.998 * 1.6 = 6.3968
+      **/
+      text-align: left;
+    }
     nav {
+      position: static;
+      clear: both;
+      padding: 0;
+      & > ul > li {
+        width: 20%;
+        float: left;
+      }
+      & > ul > li > a {
+        font-size: 1rem;
+        line-height: 2rem;
+        min-height: 6rem;
+        border: none;
+        border-left: 1px solid $lg;
+        padding: 1.0rem;
+        background-color: $w;
+      }
       & > ul > li > a:last-child {
         border-right: 1px solid $lg;
       }
     }
   }
-  @include colWidths(700px);
+  .focal,
+  .content1,
+  .content2,
+  footer {
+    width: 700px;
+  }
   .col-4 {
-    @include width(50%);
+    width: 50%;
     float: left;
   }
-  .content2 {
-    li, h4 {
+  .content2{
+    h4 {
+      font-size: 1.414rem;
+    }
+    li {
       font-size: 1.414rem;
     }
   }
-  footer {
+  footer{
     .fa-circle {
       color: $mb;
     }
@@ -298,50 +350,88 @@ footer {
   }
 }
 
-//@media all and (min-width: 901px) and (max-width: 1400px) {
-@include media(901px, 1400px) {
-  @include header(900px, 300px, $db, 1rem, 2rem, 0 1.0rem) {
+@media all and (min-width: 901px) and (max-width: 1400px) {
+  header {
+    width: 900px;
+    &:before,
+    &:after {
+      width: 300px;
+    }
     h1 {
       color: $db;
+      i.fa-lg {
+        display: inline;
+        color: $db;
+        vertical-align: baseline;
+        float: none;
+        font-size: 4rem;
+        line-height: 6.3968rem;
+      }
+      i.fa-lg ~ span {
+        float: none;
+        letter-spacing: 0.25rem;
+        font-size: 3.998rem;
+        /**
+        1 lines of 3.998 * 1.6 = 6.3968
+        **/
+        text-align: left;
+      }
     }
     nav {
+      position: static;
+      clear: both;
+      padding: 0;
       & > ul > li {
+        width: 20%;
+        float: left;
         background-color: $w;
-        & > a {
-          margin: 1.0rem 0;
-        }
-        &:first-child a {
-          border-left: none;
-        }
+      }
+      & > ul > li > a {
+        font-size: 1rem;
+        line-height: 2rem;
+        min-height: 2rem;
+        border: none;
+        border-left: 1px solid $lg;
+        padding: 0 1.0rem;
+        margin: 1.0rem 0;
+        background-color: $w;
+      }
+      & > ul > li:first-child a {
+        border-left: none;
       }
     }
   }
-  @include colWidths(900px);
-  .focal {
+  .focal,
+  .content1,
+  .content2,
+  footer {
+    width: 900px;
+  }
+  .focal{
     h2 {
-      @include width(600px);
+      width: 600px;
     }
     p.author {
-      @include width(600px);
+      width: 600px;
     }
   }
   .col-3 {
     float: left;
-    @include width(30%);
+    width: 30%;
     margin-left: 5%;
     &:first-child {
       margin-left: 0;
     }
   }
   .col-4 {
-    @include width(22%);
+    width: 22%;
     margin-left: 4%;
     float: left;
     &:first-child {
       margin-left: 0;
     }
   }
-  .content1 {
+  .content1{
     h3 {
       font-size: 1.999rem;
       font-weight: 100;
@@ -351,8 +441,11 @@ footer {
       padding-right: 1rem;
     }
   }
-  .content2 {
-    li, h4 {
+  .content2{
+    h4 {
+      font-size: 1.414rem;
+    }
+    li {
       font-size: 1.414rem;
     }
     p {
@@ -360,7 +453,7 @@ footer {
       font-weight: 400;
     }
   }
-  footer {
+  footer{
     .fa-circle {
       color: $lbr;
     }
@@ -376,40 +469,81 @@ footer {
 }
 
 @media all and (min-width: 1401px) {
-  @include header(1400px, 450px, $dbr, 1.414rem, 2rem, 0 1.0rem) {
+  header {
+    width: 1400px;
+
+    &:before,
+    &:after {
+      width: 450px;
+    }
+    h1 i.fa-lg {
+      display: inline;
+      color: $dbr;
+      vertical-align: baseline;
+      float: none;
+      font-size: 4rem;
+      line-height: 6.3968rem;
+    }
+    h1 i.fa-lg ~ span {
+      float: none;
+      letter-spacing: 0.25rem;
+      font-size: 3.998rem;
+      /**
+      1 lines of 3.998 * 1.6 = 6.3968
+      **/
+      text-align: left;
+    }
     nav {
-      background-color: $w;
+      position: static;
+      clear: both;
+      padding: 0;
+
       & > ul > li {
+        width: 20%;
+        float: left;
         background-color: $w;
-        & > a {
-          margin: 1.0rem 0;
-        }
-        &:first-child a {
-          border-left: none;
-        }
+      }
+      & > ul > li > a {
+        font-size: 1.414rem;
+        line-height: 2rem;
+        min-height: 2rem;
+        border: none;
+        border-left: 1px solid $lg;
+        padding: 0 1.0rem;
+        margin: 1.0rem 0;
+        background-color: $w;
+      }
+      & > ul > li:first-child a {
+        border-left: none;
       }
     }
+
   }
-  @include colWidths(1400px);
+  .focal,
+  .content1,
+  .content2,
+  footer {
+    width: 1400px;
+  }
   .focal {
     h2 {
       font-size: 3.998rem;
-      @include width(600px);
+      width: 600px;
     }
     p.author {
-      @include width(600px);
+      width: 600px;
     }
   }
   .col-3 {
     float: left;
-    @include width(30%);
+    width: 30%;
     margin-left: 5%;
     &:first-child {
       margin-left: 0;
     }
   }
   .col-4 {
-    @include width(22%);
+    width: 22%;
     margin-left: 4%;
     float: left;
     &:first-child {
@@ -445,7 +579,7 @@ footer {
       &:last-child {
         color: $lg;
       }
-    }
+   }
     .fa-circle {
       color: $mb;
     }
@@ -461,4 +595,3 @@ footer {
 }
 
 //6,194 bytes
-//6,320

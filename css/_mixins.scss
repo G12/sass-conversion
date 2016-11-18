@@ -1,0 +1,61 @@
+@mixin width($width){
+  @if $width == null {
+    // if width is null do this
+  } @else {
+    width: $width;
+  }
+}
+
+@mixin colWidths($width)
+{
+  .focal,
+  .content1,
+  .content2,
+  footer {
+    @include width($width);
+  }
+}
+
+@mixin header($w1, $w2, $color, $font_size, $min-height, $padding){
+  header {
+    @include width($w1);
+    &:before,
+    &:after {
+      @include width($w2);
+    }
+    h1 {
+      i.fa-lg {
+        display: inline;
+        color: $color;
+        vertical-align: baseline;
+        float: none;
+        font-size: 4rem;
+        line-height: 6.3968rem;
+      }
+      i.fa-lg ~ span {
+        float: none;
+        letter-spacing: 0.25rem;
+        font-size: 3.998rem;
+        text-align: left;
+      }
+    }
+    nav {
+      position: static;
+      clear: both;
+      padding: 0;
+      & > ul > li {
+        @include width(20%);
+        float: left;
+      }
+      & > ul > li > a {
+        font-size: $font_size;
+        line-height: 2rem;
+        min-height: $min-height;
+        border: none;
+        border-left: 1px solid $lg;
+        padding: $padding; // 1.0rem;
+      }
+    }
+    @content;
+  }
+}
